@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Car's price</title>
+</head>
+<body>
+    <div class="screen__wrapper">
+        <div class="calculator__wrapper">
+            <div class="calc__title">
+                <h1>The price of the car</h1>
+            </div>
+            <div class="calc__body">
+                <form>
+                    <div class="calculator__brand">
+                        <label for="brand">Choose the car's brand</label>
+                            <select id="brand" onchange="selectManufacturer(this.value)" class="select">
+                                <option value="none">-- Not selected --</option>
+                                <option value="bmw">BMW</option>
+                                <option value="ford">Ford</option>
+                                <option value="infiniti">Infiniti</option>
+                                <option value="peugeot">Peugeot</option>
+                            </select>
+                    </div>
+
+                    <div style="display: none;" id="model-label">Available models</div>
+                    <select id="bmwmodels" style="display: none;" id="model-select">
+                        <option value="none">-- Choose the model --</option>
+                        <option value="50000">I3</option>
+                        <option value="98000">I8</option>
+                        <option value="70000">M2</option>
+                        <option value="98000">M3</option>
+                        <option value="59800">X3</option>
+                        <option value="67000">Z4</option>
+                    </select>
+                    
+                    <select id="fordmodels" style="display: none;" class="model-select">
+                        <option value="none">-- Choose the model --</option>
+                        <option value="30000">Crown Victoria</option>
+                        <option value="78000">EcoSport</option>
+                        <option value="45000">Flex</option>
+                        <option value="66000">Galaxy</option>
+                        <option value="32800">KA</option>
+                        <option value="61000">Taurus</option>
+                    </select>
+
+                    <select id="infinitimodels" style="display: none;" class="model-select">
+                        <option value="none">-- Choose the model --</option>
+                        <option value="100000">EX</option>
+                        <option value="178000">FX</option>
+                        <option value="145000">I</option>
+                        <option value="166000">Q30</option>
+                        <option value="132800">QX30</option>
+                        <option value="161000">QX4</option>
+                    </select>
+
+                    <select id="peugeotmodels" style="display: none;" class="model-select">
+                        <option value="none">-- Choose the model --</option>
+                        <option value="40000">1007</option>
+                        <option value="55000">2008</option>
+                        <option value="78000">3008</option>
+                        <option value="32000">407</option>
+                        <option value="78800">807</option>
+                        <option value="95000">Expert</option>
+                    </select>
+                
+
+                    <div class="additions">
+                        <div>Options:</div>
+                        <label for="heated">Heated seats</label>
+                        <input type="checkbox" id="heated" value="1000"/><br/>
+                        <label for="convertible">Convertible</label>
+                        <input type="checkbox" id="convertible" value="5000"/><br/>
+                        <label for="leather-seats">Leather seats</label>
+                        <input type="checkbox" id="leather-seats" value="2000"/><br/>
+                    </div>
+                    
+                    <div class="transmissions">
+                        <div>Choose transmission type</div>
+                        <label for="manual">Manual</label>
+                        <input type="radio" name="transmission" id="manual" value="1000"/><br/>
+                        <label for="automatic">Automatic</label>
+                        <input type="radio" name="transmission" id="automatic" value="2000"/><br/>
+                    </div>
+
+                    <div class="form__button">
+                        <button class="calculator__btn" type="button" onclick="calculateCost()">Calculate the price</button>
+                    </div>
+
+                    <div class="calculator__result">
+                        <label for="calc_result">Result</label>
+                        <input type="text" id="calc_result"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
